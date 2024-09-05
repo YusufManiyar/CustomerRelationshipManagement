@@ -4,6 +4,7 @@ module.exports = {
 
     create: async (req, res) => {
        try { 
+        console.log(req.body)
             const newContact = await contactManager.createContact({ ...req.body })
             res.status(201).json(newContact)
         } catch(error){
